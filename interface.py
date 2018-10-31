@@ -44,6 +44,7 @@ def inanag(): #ANAGRAMS MODE
 	print("ANAGWAMS MODE!!!")
 	print("Loading...")
 	from engine import ang
+	ang()
 
 def incmb(): #COMBINING WORDS MODE 
 	life = 3
