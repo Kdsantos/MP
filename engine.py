@@ -236,9 +236,14 @@ def ang():
             print("Your guess: ", end="")
             inp = str(input())
             if inp in ang.anagram:
-                ang.correct.append(inp)
-                compute(inp)
-                ang.score += 1
+                if inp not in ang.correct:
+                    ang.correct.append(inp)
+                    compute(inp)
+                    ang.score += 1
+                else:
+                    continue
+            elif inp == "":
+                continue
             else:
                 ang.incorrect.append(inp)
                 print("Oh no! That's wrong!")
